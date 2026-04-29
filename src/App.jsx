@@ -78,11 +78,11 @@ function App() {
 
             <div className="form-group">
               <label>Mortgage Type</label>
-              <div className={`radio-group ${type === 'repayment' ? 'active' : ''}`}>
+              <div className={`radio-group ETB{type === 'repayment' ? 'active' : ''}`}>
                 <input type="radio" id="repayment" name="type" value="repayment" checked={type === 'repayment'} onChange={() => setType('repayment')} />
                 <label htmlFor="repayment">Repayment</label>
               </div>
-              <div className={`radio-group ${type === 'interest-only' ? 'active' : ''}`}>
+              <div className={`radio-group ETB{type === 'interest-only' ? 'active' : ''}`}>
                 <input type="radio" id="interest-only" name="type" value="interest-only" checked={type === 'interest-only'} onChange={() => setType('interest-only')} />
                 <label htmlFor="interest-only">Interest Only</label>
               </div>
@@ -96,11 +96,11 @@ function App() {
         </section>
 
         {/* Right Side: Results */}
-        <section className={`results ${results ? 'has-results' : ''}`}>
+        <section className={`results ETB{results ? 'has-results' : ''}`}>
           {!results ? (
             <div className="empty-state">
               <img 
-                src="calculator.png" 
+                src="/calculator.png" 
                 alt="Calculator illustration" 
                 className="calculator-img"
               />
@@ -115,12 +115,12 @@ function App() {
               <div className="result-card">
                 <div className="monthly">
                   <label>Your monthly repayments</label>
-                  <div className="price">${Number(results.monthly).toLocaleString()}</div>
+                  <div className="price">ETB{Number(results.monthly).toLocaleString()}</div>
                 </div>
                 <hr />
                 <div className="total">
                   <label>Total you'll repay over the term</label>
-                  <div className="total-price">${Number(results.total).toLocaleString()}</div>
+                  <div className="total-price">ETB{Number(results.total).toLocaleString()}</div>
                 </div>
               </div>
             </div>
