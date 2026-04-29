@@ -67,7 +67,7 @@ input { width: 100%; border: none; padding: 12px; font-size: 1.1rem; font-weight
 }
 
 /* Results Section */
-.results { flex: 1; background: var(--bg-results); padding: 40px; color: white; display: flex; align-items: center; justify-content: center; text-align: center; border-bottom-left-radius: 80px; }
+.results { flex: 1; background: var(--bg-results); padding: 40px; color: white; display: flex; align-items: center; justify-content: center; text-align: center;}
 .results.has-results { align-items: flex-start; text-align: left; }
 
 .empty-state h2 { margin: 20px 0 10px; }
